@@ -1,0 +1,13 @@
+package com.reflect;
+
+public class DemoReflection {
+
+	public static void main(String[] args) throws ClassNotFoundException {
+
+   Class c	=Class.forName("java.lang.String");
+   System.out.println(c);
+   boolean b=c.isInterface();
+   System.out.println(b);
+	}
+
+}

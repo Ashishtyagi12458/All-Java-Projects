@@ -1,0 +1,26 @@
+package com.collection;
+
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
+
+public class TestMap {
+	
+	public static void main(String[] args) {
+		
+		Map<String,List<String>>  map = new HashMap<String, List<String>>();
+		map.put("1", Arrays.asList("Ajay","Manish","Sachin"));
+		map.put("2", Arrays.asList("Black","Blue","Manish"));
+		
+		Set<Entry<String, List<String>>> entrySet = map.entrySet();
+		Iterator<Entry<String, List<String>>> iterator = entrySet.iterator();
+		
+		entrySet.forEach(e->System.out.println(e););
+		
+	}
+
+}

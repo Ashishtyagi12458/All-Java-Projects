@@ -1,0 +1,76 @@
+package com.Employee;
+
+import java.awt.Color;
+import java.awt.Font;
+
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+
+public class EmployeeManagment extends JFrame implements Runnable
+{
+
+	JButton next;
+	Thread thread;
+	public EmployeeManagment()
+	{
+	 setBounds(100,50,770,500);
+	 setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	 setLayout(null);
+	 
+	 ImageIcon x1=new ImageIcon(ClassLoader.getSystemResource("imp1.jpg"));
+	 JLabel image=new JLabel(x1);
+	 image.setBounds(0, 0, 770, 500);
+	 add(image);
+	 
+	 JLabel em=new JLabel("Employee Mangement System");
+	 em.setBounds(100,30,770,50);
+	 em.setForeground(Color.blue);
+	 em.setFont(new Font(Font.MONOSPACED,Font.ITALIC,40));
+	 image.add(em);
+	 
+	 next=new JButton("Next");
+	 next.setBounds(620, 400, 100, 50);
+	 next.setForeground(Color.BLACK);
+	 next.setBackground(Color.WHITE);
+	 next.setFont(new Font(Font.MONOSPACED,Font.ITALIC,26));
+
+	 image.add(next); 
+	 
+	 setVisible(true);
+	 thread=new Thread(this);
+	 thread.start();
+	 
+	 while(true) {
+			em.setVisible(false);
+			try {
+				Thread.sleep(500);
+				
+			}catch(Exception e) {
+				e.printStackTrace();
+			}
+			em.setVisible(true);
+			try {
+				Thread.sleep(500);
+			}catch(Exception e) {
+				e.printStackTrace();
+			}
+	 }
+	}
+
+	public void run() {
+		try {
+			thread.sleep(7000);
+			setVisible(false);
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+	public static void main(String[] args)
+	{
+
+		new EmployeeManagment();
+	}
+
+}

@@ -1,0 +1,10 @@
+package ProblemSolve;
+
+public class BinaryMantain {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

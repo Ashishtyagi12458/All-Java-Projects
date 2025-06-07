@@ -1,0 +1,35 @@
+package exception.com;
+
+public class NestedException
+{
+
+	public static void main(String[] args)
+	{
+		try {
+			try {
+				int a=100/0;
+				System.out.println(a);
+			}
+			catch(ArithmeticException e) {
+				System.out.println("cannot divide by zer0");
+				
+			}
+			try {
+				int arr[]=new int[10];
+				arr[10]=100;
+			}
+			catch(ArrayIndexOutOfBoundsException e) {
+				System.out.println("array is out of range");
+			}
+			String name=null;
+			System.out.println(name.length());
+			
+		}
+		catch(Exception e) {
+		 System.out.println("Steing is null");	
+		}
+		System.out.println("progrm will be contionous");
+
+	}
+
+}

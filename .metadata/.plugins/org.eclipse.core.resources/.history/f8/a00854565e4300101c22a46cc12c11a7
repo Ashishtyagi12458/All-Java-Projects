@@ -1,0 +1,18 @@
+package SpringMvc.controler;
+
+import org.springframework.ui.Model;
+
+public class HomeControler {
+	
+	
+	public String home(Model model) {
+		System.out.println("this is home url");
+		
+		model.addAttribute("name", "ashish tyagi");
+		model.addAttribute("id", 1421);
+		
+		return "index";
+		
+	}
+
+}

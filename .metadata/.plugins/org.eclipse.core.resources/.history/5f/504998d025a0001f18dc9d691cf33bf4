@@ -1,0 +1,16 @@
+package com.reflect;
+
+public class TestReflection {
+
+	public static void main(String[] args) throws ReflectiveOperationException{
+
+		Class c=Class.forName("java.lang.String");
+		System.out.println(c);
+		 boolean s=c.isInterface();
+		 System.out.println(s);
+		
+		
+		
+	}
+
+}

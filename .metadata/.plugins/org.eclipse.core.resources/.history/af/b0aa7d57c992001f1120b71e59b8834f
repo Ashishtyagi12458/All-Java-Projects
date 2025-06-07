@@ -1,0 +1,48 @@
+package com.Employee;
+
+import java.awt.Color;
+import java.awt.Font;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+
+public class AddEmployee extends JFrame
+{
+
+	JLabel addem,name,date;
+	JTextField name1,date1;
+	public AddEmployee()
+	{
+		setBounds(80,60,800,550);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setLayout(null);
+		
+		addem=new JLabel("ADD Employee");
+		addem.setBounds(200, 0, 300, 50);
+		addem.setFont(new Font(Font.MONOSPACED,Font.HANGING_BASELINE,30));
+		addem.setForeground(Color.BLUE);
+		add(addem);
+		
+		name=new JLabel("name");
+		name.setBounds(20, 60, 100, 50);
+		name.setFont(new Font(Font.MONOSPACED,Font.HANGING_BASELINE,30));
+
+		add(name);
+		
+		name1=new JTextField();
+		name1.setBounds(120, 60, 150, 40);
+		add(name1);
+		
+		
+		
+		setVisible(true);
+	}
+
+	public static void main(String[] args)
+	{
+
+		new AddEmployee();
+	}
+
+}

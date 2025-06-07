@@ -1,0 +1,18 @@
+package com.collection;
+
+public class TestMap {
+	
+	public static void main(String[] args) {
+		
+		String name = "Ajay";
+		
+		
+		
+		for(int i=name.length();i>=0;i++)
+		{
+			System.out.print(i+" ");
+		}
+		
+	}
+
+}

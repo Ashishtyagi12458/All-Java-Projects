@@ -1,0 +1,26 @@
+package com.collection;
+
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
+
+public class TestMap {
+	
+	public static void main(String[] args) {
+		
+		String name = "Ajay";
+		
+		
+		
+		for(int i=name.length();i>=0;i++)
+		{
+			System.out.println();
+		}
+		
+	}
+
+}

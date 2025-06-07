@@ -1,0 +1,20 @@
+package SpringMvc.controler;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+@Controller
+public class HomeControler {
+	
+	@RequestMapping("/home")
+	public String home(Model model) {
+		System.out.println("this is home url");
+		
+		model.addAttribute("name", "ashish tyagi");
+		model.addAttribute("id", 1421);
+		
+		return "index";
+		
+	}
+
+}

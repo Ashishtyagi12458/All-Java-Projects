@@ -1,0 +1,9 @@
+package exception.com;
+
+public class MyException {
+
+	public MyException() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

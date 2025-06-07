@@ -1,0 +1,13 @@
+package ProblemSolve;
+
+public class MuntaionValue {
+
+	public static void main(String[] args) {
+
+		int arr[]= {0,3,4,2,1};
+		while(arr[0]<arr[0+1]) {
+			return ;
+		}
+	}
+
+}

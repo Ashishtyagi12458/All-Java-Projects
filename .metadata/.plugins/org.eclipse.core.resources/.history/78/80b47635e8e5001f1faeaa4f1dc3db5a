@@ -1,0 +1,18 @@
+package com.collection;
+
+public class TestMap {
+	
+	public static void main(String[] args) {
+		
+		String name = "Ajay";
+		
+		byte[] bytes = name.getBytes();
+		
+		for(int i=bytes.length ; i>1;i--)
+		{
+			System.out.print(bytes[i]+" ");
+		}
+		
+	}
+
+}

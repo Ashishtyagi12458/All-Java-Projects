@@ -1,0 +1,44 @@
+package com.Employee;
+
+import java.awt.Font;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+
+public class Login extends JFrame
+{
+
+	JLabel user,pass;
+	JTextField user1,pass1;
+	public Login()
+	{
+		setBounds(50,50,650,450);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setLayout(null);
+		
+		user=new JLabel("Username");
+		user.setBounds(20, 80, 150, 50);
+		user.setFont(new Font(Font.SANS_SERIF,Font.PLAIN,30));
+		add(user);
+		
+		pass=new JLabel("Password");
+		pass.setBounds(20, 130, 150, 50);
+		pass.setFont(new Font(Font.SANS_SERIF,Font.PLAIN,30));
+		add(pass);
+		
+		
+		
+		
+		
+		
+		setVisible(true);
+		
+	}
+
+	public static void main(String[] args) {
+ 
+		new Login();
+	}
+
+}

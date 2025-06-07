@@ -1,0 +1,18 @@
+package com.reflect;
+
+public class TestReflection {
+	
+	void show() {
+		System.out.println("Create object of clas using newInstence()");
+		
+	}
+
+	public static void main(String[] args) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+	Class s	=Class.forName("com.reflection.TestReflection");
+	TestReflection t=(TestReflection)s.newInstance();
+	t.show();
+	
+
+	}
+
+}

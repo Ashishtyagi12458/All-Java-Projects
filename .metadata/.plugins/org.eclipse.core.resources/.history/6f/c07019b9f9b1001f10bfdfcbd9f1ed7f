@@ -1,0 +1,14 @@
+package com.collection;
+
+import java.util.ArrayList;
+
+public class ArrayListAdvanceMethod {
+
+	public static void main(String[] args) {
+		ArrayList<String> s1=new ArrayList<String>();
+        s1.add("Apple");
+        s1.add("banana");
+        s1.add("banda badmans kuta ka bij");
+	}
+
+}

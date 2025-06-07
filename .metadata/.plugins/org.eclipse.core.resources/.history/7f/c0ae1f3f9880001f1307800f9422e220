@@ -1,0 +1,157 @@
+package hotal.managment;
+
+import java.awt.Choice;
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.sql.Date;
+import java.sql.ResultSet;
+
+import javax.swing.ButtonGroup;
+import javax.swing.JComboBox;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JRadioButton;
+import javax.swing.JTextField;
+
+public class AddCustomer extends JFrame implements ActionListener
+{
+ JLabel cust, id,num,name,gend,state,room,time,desp,time1;
+ JComboBox id1;
+ JTextField num1,name1,state1,desp1;
+ JRadioButton gend1,gend2;
+ ButtonGroup ga;
+ Choice  room1;
+ 
+	public AddCustomer()
+	{
+		setBounds(100,60,760,480);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setLayout(null);
+		
+		cust=new JLabel("ADD NEW CUSTOMER");
+		cust.setBounds(180,-15,350,50);
+		cust.setFont(new Font(Font.SERIF,Font.ROMAN_BASELINE,30));
+		cust.setForeground(Color.RED);
+		add(cust);
+		
+		
+		id=new JLabel("Customer id");
+		id.setBounds(10, 50, 150, 30);
+		id.setFont(new Font(Font.SANS_SERIF,Font.PLAIN,20));
+		add(id);
+		
+		String str1[]= {"Select ide","Addharcard","PanCard","VoterCard","Driving laycence"};
+		id1=new JComboBox(str1);
+		id1.setBounds(150, 50, 180, 30);
+		add(id1);
+		
+		num=new JLabel("Number");
+		num.setBounds(10, 100, 150, 30);
+		num.setFont(new Font(Font.SANS_SERIF,Font.PLAIN,20));
+		add(num);
+		
+		num1=new JTextField();
+		num1.setBounds(150, 100, 180, 30);
+		add(num1);
+		
+		name=new JLabel("Customer Name");
+		name.setBounds(05, 150, 150, 30);
+		name.setFont(new Font(Font.SANS_SERIF,Font.PLAIN,20));
+		add(name);
+		
+		name1=new JTextField();
+		name1.setBounds(160, 180, 180, 30);
+		add(name1);
+
+		gend=new JLabel("Gender");
+		gend.setBounds(05, 200, 100, 30);
+		gend.setFont(new Font(Font.SANS_SERIF,Font.PLAIN,20));
+		add(gend);
+		
+		gend1=new JRadioButton("Male");
+		gend1.setBounds(100, 200, 160, 30);
+		gend1.setFont(new Font(Font.SANS_SERIF,Font.PLAIN,20));
+		add(gend1);
+		
+		gend2=new JRadioButton("Female");
+		gend2.setBounds(180, 200, 220, 30);
+		gend2.setFont(new Font(Font.SANS_SERIF,Font.PLAIN,20));
+		add(gend2);
+		
+		ga=new ButtonGroup();
+		ga.add(gend1);
+		ga.add(gend2);
+		
+		state=new JLabel("States");
+		state.setBounds(10, 250, 100, 30);
+		state.setFont(new Font(Font.SANS_SERIF,Font.PLAIN,20));
+		add(state);
+		
+		state1=new JTextField();
+		state1.setBounds(150, 250, 180, 30);
+		add(state1);
+
+		room=new JLabel("Allocate Room NO");
+		room.setBounds(05, 300, 170, 30);
+		room.setFont(new Font(Font.SANS_SERIF,Font.PLAIN,20));
+		add(room);
+		
+		room1=new Choice();
+		try {
+			conn co=new conn();
+			String quary="select * from room";
+			ResultSet rs=co.st.executeQuery(quary);
+			while(rs.next())
+			{
+				room1.add(rs.getString("roomnumber,bedtype"));
+			}
+			
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		
+		room1.setBounds(190, 300, 180, 30);
+		add(room1);
+		
+		
+		
+		time=new JLabel("Check In Time");
+		time.setBounds(05, 350, 170, 30);
+		time.setFont(new Font(Font.SANS_SERIF,Font.PLAIN,20));
+		add(time);
+
+		//Date date=new Date();
+		
+		//time1=new JLabel(""+date);
+		//.setBounds(05, 370, 170, 30);
+		//time1.setFont(new Font(Font.SANS_SERIF,Font.PLAIN,20));
+		//(time1);
+		
+		desp=new JLabel("Deposit");
+		desp.setBounds(05, 400, 150, 30);
+		desp.setFont(new Font(Font.SANS_SERIF,Font.PLAIN,20));
+		add(desp);
+		
+		desp1=new JTextField();
+		desp1.setBounds(150, 400, 150, 30);
+		add(desp1);
+
+		
+		
+		
+		setVisible(true);
+		
+		
+			}
+
+	public void actionPerformed(ActionEvent ac)
+	{
+		
+	}
+	public static void main(String[] args)
+	{
+		new AddCustomer();	}
+
+}
